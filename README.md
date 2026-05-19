@@ -2,4 +2,4 @@
 
 made this because i was bored & i wanted more speed in source, should be undetected but yeah idrk
 
-dm me on discord (@saqqwd) if you want help with anything
+dm me on discord (@nooooow_) if you want help with anything
