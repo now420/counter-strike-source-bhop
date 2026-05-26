@@ -55,8 +55,8 @@ int main() {
         return 1;
     }
 
-    DWORD jumpOffset = 0x4F5D24;
-    DWORD airOffset = 0x4A4078;
+    DWORD jumpOffset = 0x4F5D24; // outdated
+    DWORD airOffset = 0x4A4078; // outdated
     DWORD jumpAddress = clientBaseAddress + jumpOffset;
     DWORD airAddress = clientBaseAddress + airOffset;
 
@@ -75,7 +75,7 @@ int main() {
                 if (airFlag == 0) {
                     int jumpValue = 5;
                     WriteProcessMemory(hproc, (LPVOID)jumpAddress, &jumpValue, sizeof(jumpValue), NULL);
-                    Sleep(1); // you can change this value for better bhop (u cant remove the sleep entirely or jumping wont work, i tried it)
+                    Sleep(1); // tweak sleep value maybe, you can't remove it entirely for hopefully obvious reasons...
                     jumpValue = 4;
                     WriteProcessMemory(hproc, (LPVOID)jumpAddress, &jumpValue, sizeof(jumpValue), NULL);
                 }
@@ -83,7 +83,7 @@ int main() {
         }
 
         Sleep(1);
-        // ^ u can uncomment this for **slightly** better bhop although theres no visible difference besides the amount of resources being used
+        // ^ u can uncomment this for **slightly** better bhop although theres no real noticable difference besides the amount of resources being used
     }
 
     CloseHandle(hproc);
